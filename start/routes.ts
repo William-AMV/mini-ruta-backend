@@ -12,7 +12,7 @@ import UsersController from '#controllers/users_controller';
 import router from '@adonisjs/core/services/router'
 import { middleware } from './kernel.js';
 import { RoleEnum } from '../app/patterns/role_enum.js';
-import StopsController from '#controllers/stops_controller';
+import StopsController from '#controllers/places_controller';
 
 router.get('/', async () => {
   return {
@@ -27,7 +27,7 @@ router.group(() => {
   router.get('authUser', [AuthController, 'authUser']);
   router.post('auth/logout', [AuthController, 'logout']);
 
-  router.resource("stops", StopsController).apiOnly().except(['show']);
+  router.resource("places", StopsController).apiOnly().except(['show']);
 
    router.group(() => {
     router.resource("users", UsersController).apiOnly().except(['show']);

@@ -9,7 +9,7 @@ export default class extends BaseSeeder {
       {
         fullName: "Admin",
         email: "admin@gmail.com",
-        password: "Sys#QuotatioN*202#!",
+        password: "admin123",
         role: RoleEnum.ADMINISTRATOR,
         isActive: true
       }
